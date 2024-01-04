@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: black;
+}
+
+.board {
+    height: 70vh;
+    width: 70vh;
+    border: 2px solid rgb(255, 255, 255);
+    display: grid;
+    grid-template: repeat(32, 1fr) / repeat(32, 1fr);
+}
+
+.grid {
+    border: 0.5px solid rgb(49, 49, 49);
+}
+
+.grid.alive {
+    background-color: rgb(255, 255, 255);
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    background-color: greenyellow;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .board {
+    height: 35vh;
+    width: 35vh;
+  }
+}
