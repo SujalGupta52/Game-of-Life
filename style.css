@@ -39,7 +39,7 @@ button {
 
 @media screen and (max-width: 600px) {
   .board {
-    height: 35vh;
-    width: 35vh;
+    height: 40vh;
+    width: 40vh;
   }
 }
