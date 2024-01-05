@@ -33,7 +33,7 @@ function addEventHandlerGrid(handlerFunction) {
   document.querySelectorAll(".grid").forEach((grid) =>
     grid.addEventListener("mouseover", (e) => {
       if (e.buttons === 1) {
-        drawHandler(e);
+        handlerFunction(e);
       }
     })
   );
@@ -45,7 +45,7 @@ function addEventHandlerGrid(handlerFunction) {
 function removeEventHandlerGrid(handlerFunction) {
   document
     .querySelectorAll(".grid")
-    .forEach((grid) => grid.removeEventListener("mousedown", drawHandler));
+    .forEach((grid) => grid.removeEventListener("mousedown", handlerFunction));
 }
 
 function drawHandler(e) {
@@ -103,7 +103,7 @@ function startGame() {
     const body = document.querySelector("body");
     const startBtn = document.querySelector("button");
     body.removeChild(startBtn);
-    removeEventHandlerGrid();
+    removeEventHandlerGrid(drawHandler);
     setInterval(tick, 300);
   });
 }
