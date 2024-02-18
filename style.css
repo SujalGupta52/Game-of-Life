@@ -19,14 +19,17 @@ body {
     border: 2px solid rgb(255, 255, 255);
     display: grid;
     grid-template: repeat(32, 1fr) / repeat(32, 1fr);
+background-image: linear-gradient(to right bottom, #ffff00, #ffda00, #ffb500, #ff8f00, #ff6700, #ff5022, #ff3435, #ff0046, #fe006a, #e90098, #b600cd, #0013ff);
 }
 
 .grid {
     border: 0.5px solid rgb(49, 49, 49);
+    background-color: rgb(1, 1, 58);
 }
 
 .grid.alive {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    
 }
 
 button {

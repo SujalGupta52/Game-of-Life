@@ -1,5 +1,13 @@
 let currentBoard = [];
-const colorList = ['red', 'blue', 'green', 'yellow', 'orange', 'white', 'purple'];
+const colorList = [
+  "red",
+  "blue",
+  "green",
+  "yellow",
+  "orange",
+  "white",
+  "purple",
+];
 
 function initialiseBoard(board, size) {
   for (let i = 0; i < size; i++) {
@@ -21,9 +29,9 @@ function createBoardDOM(board) {
       grid.classList.toggle("grid");
       grid.dataset.row = i;
       grid.dataset.column = j;
-      if (board[i][j] === 1){ grid.classList.toggle("alive");
-      grid.style.backgroundColor = colorList[Math.floor(Math.random() * colorList.length)];
-    }
+      if (board[i][j] === 1) {
+        grid.classList.toggle("alive");
+      }
       boardDOM.appendChild(grid);
     }
   }
@@ -109,4 +117,3 @@ function startGame() {
 }
 
 startGame();
-
